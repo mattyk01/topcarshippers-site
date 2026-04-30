@@ -259,16 +259,81 @@ h2.section-title em { font-style: italic; font-weight: 500; }
 
 /* ── LIST PAGE ENTRIES ── */
 .entry-list { max-width: 860px; margin: 0 auto; padding: 72px 32px; }
-.quick-picks { background: var(--ink); color: var(--paper); padding: 32px 36px; margin-bottom: 56px; }
-.quick-picks-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent-on-dark); margin-bottom: 20px; }
-.qp-row { display: flex; align-items: baseline; gap: 14px; padding: 8px 0; border-bottom: 1px solid #2a2a2a; }
+.quick-picks {
+  background: var(--paper-2);
+  color: var(--ink);
+  border: 1px solid var(--rule-strong);
+  padding: 28px 32px;
+  margin-bottom: 56px;
+}
+.quick-picks-label {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.qp-row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+}
 .qp-row:last-child { border-bottom: none; }
-.qp-num { font-family: var(--display); font-size: 13px; color: #52525b; font-style: italic; min-width: 20px; }
-.qp-name { font-size: 14px; font-weight: 500; color: #e4e4e7; flex: 1; }
-.qp-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; padding: 3px 8px; white-space: nowrap; }
-.qp-badge.red { color: var(--accent-on-dark); background: rgba(176,33,11,0.18); border: 1px solid rgba(176,33,11,0.3); }
-.qp-badge.gold { color: #fbbf24; background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.25); }
-.qp-badge.slate { color: #93c5fd; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.2); }
+.qp-num {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-3);
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.qp-name {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.qp-badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 10px;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+.qp-badge.red { color: var(--accent); background: rgba(176,33,11,0.08); border: 1px solid rgba(176,33,11,0.25); }
+.qp-badge.gold { color: #92580a; background: rgba(251,191,36,0.15); border: 1px solid rgba(251,191,36,0.4); }
+.qp-badge.slate { color: #1e40af; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); }
+
+/* ── CTA BUTTON ── */
+.entry-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 12px 22px;
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+  margin: 8px 0 4px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.entry-cta:hover { background: var(--accent-ink); border-color: var(--accent-ink); color: #fff; }
+.entry-cta::after { content: "→"; font-family: var(--sans); font-weight: 500; transition: transform 0.15s ease; }
+.entry-cta:hover::after { transform: translateX(3px); }
 .entry { border-top: 1px solid var(--rule); padding: 52px 0; }
 .entry:first-child { border-top: 1px solid var(--ink); }
 .entry-rank-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
