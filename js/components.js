@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="footer-disclosure">
             <span class="label">Disclosure</span>
-            TopCarShippers.com is independently operated. We may earn a referral fee if you book through links on this site. This does not influence our rankings.
+            TopCarShippers.com is independently operated. We may earn a referral fee if you book through links on this site.
           </div>
         </div>
         <div class="footer-bottom">
