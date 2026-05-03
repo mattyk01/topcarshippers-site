@@ -409,3 +409,9 @@ footer.site { background: var(--ink); color: var(--paper); padding: 64px 0 36px;
   .entry-list { padding: 48px 20px; }
   .article-wrap { padding: 48px 20px; }
 }
+.pick-logo-placeholder,
+.pick-logo-placeholder .ph {
+  border: none !important;
+  background: transparent !important;
+}
+.pick-logo-placeholder .ph { display: none; }
