@@ -1,7 +1,6 @@
 /* ============================================================
    Top Car Shippers — Shared Components
    Nav and footer injected into every page.
-   To update nav or footer across the whole site, edit here.
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="footer-disclosure">
             <span class="label">Disclosure</span>
-            TopCarShippers.com is independently operated. We may earn a referral fee if you book through links on this site.
+            TopCarShippers.com is independently operated. We may earn a referral fee if you book through links on this site. This does not influence our rankings.
           </div>
         </div>
         <div class="footer-bottom">
@@ -49,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <nav class="footer-nav">
             <a href="/#our-lists">Our Lists</a>
             <a href="/blog/">Blog</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms-of-use.html">Terms of Use</a>
           </nav>
         </div>
       </div>
