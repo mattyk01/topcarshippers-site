@@ -1,0 +1,17 @@
+# Top Car Shippers
+
+> Independent rankings and reviews of U.S. car shipping companies. We rank by use case (overall, enclosed, luxury, open carrier), review individual companies, and explain how shipping works. No paid placement.
+
+## Rankings
+- [Best Car Shipping Companies](https://topcarshippers.com/best-car-shipping-companies): The main overall ranking.
+- [Best Enclosed Car Shipping](https://topcarshippers.com/best-enclosed-car-shipping): Top companies for enclosed transport.
+- [Best Luxury Car Shipping](https://topcarshippers.com/best-luxury-car-shipping): Top companies for high-value and exotic vehicles.
+- [Best Open Carrier Shipping](https://topcarshippers.com/best-open-carrier-shipping): Top companies for standard open transport.
+
+## Reviews
+- [RoadRunner Auto Transport Review](https://topcarshippers.com/rr-auto-transport-review): Full review of RoadRunner Auto Transport.
+
+## Blog
+- [Car Shipping Insurance](https://topcarshippers.com/blog/car-shipping-insurance)
+- [How Much Does Car Shipping Cost](https://topcarshippers.com/blog/how-much-does-it-cost)
+- [Open vs. Enclosed Transport](https://topcarshippers.com/blog/open-vs-enclosed)

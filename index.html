@@ -20,13 +20,29 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
-  <script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Top Car Shippers",
-  "url":"https://topcarshippers.com",
-  "logo":"https://topcarshippers.com/og-default.jpg"
-}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://topcarshippers.com/#org",
+      "name": "Top Car Shippers",
+      "url": "https://topcarshippers.com",
+      "logo": "https://topcarshippers.com/og-default.jpg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://topcarshippers.com/#website",
+      "url": "https://topcarshippers.com",
+      "name": "Top Car Shippers",
+      "publisher": {
+        "@id": "https://topcarshippers.com/#org"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
