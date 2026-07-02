@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="/blog/">Blog</a>
             <a href="/privacy-policy.html">Privacy Policy</a>
             <a href="/terms-of-use.html">Terms of Use</a>
+            <a href="/contact.html">Contact</a>
           </nav>
         </div>
       </div>
