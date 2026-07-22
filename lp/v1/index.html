@@ -763,7 +763,7 @@
           </div>
           <div class="right">
             <div class="rate"><span class="stars" aria-label="4.7 of 5"><span class="base">★★★★★</span><span class="fill" style="width:94%">★★★★★</span></span><span class="score">4.7</span><span class="rev-count">390+ reviews</span></div>
-            <a class="cta sm" href="https://easycargoship.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
+            <a target="_blank" class="cta sm" href="https://easycargoship.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
           </div>
         </article>
 
@@ -777,7 +777,7 @@
           </div>
           <div class="right">
             <div class="rate"><span class="stars" aria-label="4.7 of 5"><span class="base">★★★★★</span><span class="fill" style="width:94%">★★★★★</span></span><span class="score">4.7</span><span class="rev-count">480+ reviews</span></div>
-            <a class="cta sm" href="https://mercuryautotransport.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
+            <a target="_blank" class="cta sm" href="https://mercuryautotransport.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
           </div>
         </article>
 
@@ -791,7 +791,7 @@
           </div>
           <div class="right">
             <div class="rate"><span class="stars" aria-label="4.6 of 5"><span class="base">★★★★★</span><span class="fill" style="width:92%">★★★★★</span></span><span class="score">4.6</span><span class="rev-count">1,300+ reviews</span></div>
-            <a class="cta sm" href="https://nexusautotransport.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
+            <a target="_blank" class="cta sm" href="https://nexusautotransport.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
           </div>
         </article>
 
@@ -805,7 +805,7 @@
           </div>
           <div class="right">
             <div class="rate"><span class="stars" aria-label="4.4 of 5"><span class="base">★★★★★</span><span class="fill" style="width:88%">★★★★★</span></span><span class="score">4.4</span><span class="rev-count">1,450+ reviews</span></div>
-            <a class="cta sm" href="https://passporttransport.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
+            <a target="_blank" class="cta sm" href="https://passporttransport.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
           </div>
         </article>
 
@@ -819,7 +819,7 @@
           </div>
           <div class="right">
             <div class="rate"><span class="stars" aria-label="4.4 of 5"><span class="base">★★★★★</span><span class="fill" style="width:88%">★★★★★</span></span><span class="score">4.4</span><span class="rev-count">1,200+ reviews</span></div>
-            <a class="cta sm" href="https://shipacardirect.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
+            <a target="_blank" class="cta sm" href="https://shipacardirect.com/?utm_source=topcarshippers.com&amp;utm_medium=affiliate" rel="nofollow sponsored noopener">Get Quote <span class="arw">→</span></a>
           </div>
         </article>
 
@@ -936,19 +936,12 @@
     if (!a || !a.getAttribute('href')) return;
     var href = a.getAttribute('href');
     if (href.replace(/\s+/g,'') === rrPhone) {
-      if (typeof gtag === 'function') gtag('event', 'rr_phone_click', {transport_type:'beacon'});
+      if (typeof gtag === 'function') gtag('event', 'rr_phone_click');
       return;
     }
     for (var i = 0; i < map.length; i++) {
       if (href.indexOf(map[i].host) !== -1) {
-        if (typeof gtag !== 'function') return;
-        var newContext = a.target === '_blank' || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
-        if (newContext) { gtag('event', map[i].event, {transport_type:'beacon'}); return; }
-        e.preventDefault();
-        var dest = a.href, navigated = false;
-        var go = function(){ if (navigated) return; navigated = true; window.location.href = dest; };
-        gtag('event', map[i].event, {transport_type:'beacon', event_callback: go});
-        setTimeout(go, 1000);
+        if (typeof gtag === 'function') gtag('event', map[i].event);
         return;
       }
     }
