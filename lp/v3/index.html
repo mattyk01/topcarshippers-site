@@ -374,12 +374,19 @@
     if (!a || !a.getAttribute('href')) return;
     var href = a.getAttribute('href');
     if (href.replace(/\s+/g,'') === rrPhone) {
-      if (typeof gtag === 'function') gtag('event', 'rr_phone_click');
+      if (typeof gtag === 'function') gtag('event', 'rr_phone_click', {transport_type:'beacon'});
       return;
     }
     for (var i = 0; i < map.length; i++) {
       if (href.indexOf(map[i].host) !== -1) {
-        if (typeof gtag === 'function') gtag('event', map[i].event);
+        if (typeof gtag !== 'function') return;
+        var newContext = a.target === '_blank' || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
+        if (newContext) { gtag('event', map[i].event, {transport_type:'beacon'}); return; }
+        e.preventDefault();
+        var dest = a.href, navigated = false;
+        var go = function(){ if (navigated) return; navigated = true; window.location.href = dest; };
+        gtag('event', map[i].event, {transport_type:'beacon', event_callback: go});
+        setTimeout(go, 1000);
         return;
       }
     }
