@@ -374,12 +374,12 @@
     if (!a || !a.getAttribute('href')) return;
     var href = a.getAttribute('href');
     if (href.replace(/\s+/g,'') === rrPhone) {
-      if (typeof gtag === 'function') gtag('event', 'rr_phone_click');
+      if (typeof gtag === 'function') gtag('event', 'rr_phone_click', {send_to: 'G-SRD6VZQRNR'});
       return;
     }
     for (var i = 0; i < map.length; i++) {
       if (href.indexOf(map[i].host) !== -1) {
-        if (typeof gtag === 'function') gtag('event', map[i].event);
+        if (typeof gtag === 'function') gtag('event', map[i].event, {send_to: 'G-SRD6VZQRNR'});
         return;
       }
     }
